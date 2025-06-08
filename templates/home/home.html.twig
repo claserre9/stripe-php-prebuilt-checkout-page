@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/dist/home.bundle.css">
+{% endblock %}
+{% block body %}
+    <div class="donation-container">
+        <h2>Support Us</h2>
+        <p>Select or enter an amount to donate:</p>
+
+        <!-- Predefined donation buttons -->
+        <div class="preset-buttons">
+            <!-- Bind button clicks to the `selectPresetAmount` method -->
+            <button data-bind="click: () => selectPresetAmount(10)">$10</button>
+            <button data-bind="click: () => selectPresetAmount(25)">$25</button>
+            <button data-bind="click: () => selectPresetAmount(50)">$50</button>
+        </div>
+
+        <form action="/donate" method="POST" data-bind="submit: submitDonation">
+            <label for="amount"></label>
+            <input type="number" id="amount" name="amount" data-bind="value: amount" min="1" step="0.01" placeholder="Enter custom amount" required>
+            <br>
+            <button type="submit">Donate</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/dist/home.bundle.js"></script>
+{% endblock %}
+

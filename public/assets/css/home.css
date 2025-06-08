@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+    padding: 2rem;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.donation-container {
+    background: white;
+    padding: 2rem;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.preset-buttons button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 80%;
+    margin: 1rem 0;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}

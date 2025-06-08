@@ -1,0 +1,4 @@
+/public/dist/
+/vendor/
+/node_modules/
+.env
