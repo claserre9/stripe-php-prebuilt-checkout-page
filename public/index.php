@@ -13,7 +13,13 @@ require __DIR__ . '/../vendor/autoload.php';
 
 
 $dotenv = new Dotenv();
-$dotenv->load(__DIR__.'/../.env');
+$env = __DIR__ . '/../.env';
+$localEnv = __DIR__ . '/../.env.local';
+if (file_exists($localEnv)) {
+    $dotenv->load($localEnv);
+} elseif (file_exists($env)) {
+    $dotenv->load($env);
+}
 
 try {
     $builder = new ContainerBuilder();
